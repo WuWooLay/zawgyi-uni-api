@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Zawgyi-Unicode Converter Api</a>
+    </nav>
+
+    <!-- Detect ZawGyi Start -->
+    <div class="container mt-3">
+
+        <h2> Zawgyi </h2>
+
+        <h5 class="mb-4"> Detecting Zawgyi </h5>
+
+        <div class="row">
+
+
+            <div class="col-md-4 col-lg-3 mb-3">
+                <div class="card">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                    <span class="badge badge-success"> Get </span>
+                                    <a 
+                                     class="btn btn-light btn-sm"
+                                     href="/api/zawgyi/detect?text=သီဟိုဠ္မွ ဉာဏ္ႀကီးရွင္သည္ အာယုဝဍ္ဎနေဆးၫႊန္းစာကို ဇလြန္ေဈးေဘး ဗာဒံပင္ထက္ အဓိ႒ာန္လ်က္ ဂဃနဏဖတ" target="_blank" role="button" 
+                                    > 
+                                        /api/zawgyi/detect 
+                                    </a>
+                            </div>
+                            <div class="responsive-table">
+                                <h6> Input Fields </h6>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Key</th>
+                                            <th scope="col">Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td> text </td>
+                                                <td>
+                                                     <span class="badge badge-light">String</span>
+                                                </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                           
+                        
+                        </div>
+                </div>
+            </div>
+            
+            <!-- Success Output -->
+            <div class="col-md-5 col-lg-6 mb-3">
+                    <div class="card">
+                            <div class="card-body">
+                                    <button type="button" class="btn btn-light" disabled>
+                                            Success 200 - OK
+                                    </button>
+                                <p>
+<pre>
+{
+    "detect": true,
+    "isZawgyi": true,
+    "zawgyiScore": 1,
+    "description": "Your Result is Out "
+}
+</pre>
+                                </p>
+                            </div>
+                    </div>
+            </div>
+            <!-- Success Output End -->
+
+            <!-- Error Out  -->
+            <div class="col-md-3 col-lg-3 mb-3">
+                    <div class="card">
+                            <div class="card-body">
+                                    <button type="button" class="btn btn-danger" disabled>
+                                            400 - Bad Request
+                                    </button>
+                                <p>
+<pre>
+{
+    "error": "\"text\" is required"
+}
+</pre>
+                                </p>
+                            </div>
+                    </div>
+            </div>
+            <!-- Error Out  End-->
+
+        </div>
+
+    </div>
+    <!-- Detect ZawGyi End -->
+
+    <!-- Convert ZawGyi Start -->
+    <div class="container mt-3">
+
+        <h5 class="mb-4"> Converting Zawgyi </h5>
+
+        <div class="row">
+
+
+            <div class="col-md-4 col-lg-3 mb-3">
+                <div class="card">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                    <span class="badge badge-success"> Get </span>
+                                    <a 
+                                     class="btn btn-light btn-sm"
+                                     href="/api/zawgyi/convert?text=သီဟိုဠ်မှ ဉာဏ်ကြီးရှင်သည် အာယုဝဍ္ဎနဆေးညွှန်းစာကို ဇလွန်ဈေးဘေး ဗာဒံပင်ထက် အဓိဋ္ဌာန်လျက် ဂဃနဏဖတ်ခဲ့သည်။"
+                                     target="_blank" role="button" 
+                                    > 
+                                        /api/zawgyi/convert 
+                                    </a>
+                            </div>
+                            <div class="responsive-table">
+                                <h6> Input Fields </h6>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Key</th>
+                                            <th scope="col">Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td> text </td>
+                                                <td>
+                                                     <span class="badge badge-light">String</span>
+                                                </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                           
+                        
+                        </div>
+                </div>
+            </div>
+            
+            <!-- Success Output -->
+            <div class="col-md-5 col-lg-6 mb-3">
+                    <div class="card">
+                            <div class="card-body">
+                                    <button type="button" class="btn btn-light" disabled>
+                                            Success 200 - OK
+                                    </button>
+                                <p>
+<pre>
+{
+    "changeText": "သီဟိုဠ္မွ ဉာဏ္ႀကီးရွင္သည္ အာယုဝဍ္ဎနေဆးၫႊန္းစာကို ဇလြန္ေဈးေဘး ဗာဒံပင္ထက္ အဓိ႒ာန္လ်က္ ဂဃနဏဖတ္ခဲ့သည္။"
+}
+</pre>
+                                </p>
+                            </div>
+                    </div>
+            </div>
+            <!-- Success Output End -->
+
+            <!-- Error Out  -->
+            <div class="col-md-3 col-lg-3 mb-3">
+                    <div class="card">
+                            <div class="card-body">
+                                    <button type="button" class="btn btn-danger" disabled>
+                                            400 - Bad Request
+                                    </button>
+                                <p>
+<pre>
+{
+    "error": "\"text\" is required"
+}
+</pre>
+                                </p>
+                            </div>
+                    </div>
+            </div>
+            <!-- Error Out  End-->
+
+        </div>
+
+    </div>
+    <!-- Convert ZawGyi End -->
+
+    <!-- Detect & Convert ZawGyi Start -->
+    <div class="container mt-3">
+
+        <h5 class="mb-4"> Detect-Convert Zawgyi </h5>
+
+        <div class="row">
+
+            <div class="col-md-4 col-lg-3 mb-3">
+                <div class="card">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                    <span class="badge badge-success"> Get </span>
+                                    <a 
+                                     class="btn btn-light btn-sm"
+                                     href="/api/zawgyi/detect-convert?text=သီဟိုဠ်မှ ဉာဏ်ကြီးရှင်သည် အာယုဝဍ္ဎနဆေးညွှန်းစာကို ဇလွန်ဈေးဘေး ဗာဒံပင်ထက် အဓိဋ္ဌာန်လျက် ဂဃနဏဖတ်ခဲ့သည်။"
+                                     target="_blank" role="button" 
+                                    > 
+                                        /api/zawgyi/detect-convert 
+                                    </a>
+                            </div>
+                            <div class="responsive-table">
+                                <h6> Input Fields </h6>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Key</th>
+                                            <th scope="col">Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td> text </td>
+                                                <td>
+                                                     <span class="badge badge-light">String</span>
+                                                </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                           
+                        
+                        </div>
+                </div>
+            </div>
+            
+            <!-- Success Output -->
+            <div class="col-md-5 col-lg-6 mb-3">
+                    <div class="card">
+                            <div class="card-body">
+                                    <button type="button" class="btn btn-light" disabled>
+                                            Success 200 - OK
+                                    </button>
+                                <p>
+<pre>
+{
+    "detect": true,
+    "isZawgyi": false,
+    "changeText": "သီဟိုဠ္မွ ဉာဏ္ႀကီးရွင္သည္ အာယုဝဍ္ဎနေဆးၫႊန္းစာကို ဇလြန္ေဈးေဘး ဗာဒံပင္ထက္ အဓိ႒ာန္လ်က္ ဂဃနဏဖတ္ခဲ့သည္။",
+    "zawgyiScore": 0,
+    "description": "Your Result is Out "
+}
+</pre>
+                                </p>
+                            </div>
+                    </div>
+            </div>
+            <!-- Success Output End -->
+
+            <!-- Error Out  -->
+            <div class="col-md-3 col-lg-3 mb-3">
+                    <div class="card">
+                            <div class="card-body">
+                                    <button type="button" class="btn btn-danger" disabled>
+                                            400 - Bad Request
+                                    </button>
+                                <p>
+<pre>
+{
+    "error": "\"text\" is required"
+}
+</pre>
+                                </p>
+                            </div>
+                    </div>
+            </div>
+            <!-- Error Out  End-->
+
+        </div>
+
+    </div>
+    <!-- Detect & Convert ZawGyi End -->
+
+    <!-- Complex & Convert ZawGyi Start -->
+    <div class="container mt-3">
+
+        <h5 class="mb-4"> Complex-Convert Zawgyi </h5>
+
+        <div class="row">
+
+            <div class="col-md-4 col-lg-3 mb-3">
+                <div class="card">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                    <span class="badge badge-success"> Get </span>
+                                    <a 
+                                     class="btn btn-light btn-sm"
+                                     href="/api/zawgyi/complex-convert?text=သီဟိုဠ်မှ%20ဉာဏ်ကြီးရှင်သည်"
+                                     target="_blank" role="button" 
+                                    > 
+                                        /api/zawgyi/complex-convert 
+                                    </a>
+                            </div>
+                            <div class="responsive-table">
+                                <h6> Input Fields </h6>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Key</th>
+                                            <th scope="col">Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td> text </td>
+                                                <td>
+                                                     <span class="badge badge-light">String</span>
+                                                </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                           
+                        
+                        </div>
+                </div>
+            </div>
+            
+            <!-- Success Output -->
+            <div class="col-md-5 col-lg-6 mb-3">
+                    <div class="card">
+                            <div class="card-body">
+                                    <button type="button" class="btn btn-light" disabled>
+                                            Success 200 - OK
+                                    </button>
+                                <p>
+<pre>
+{
+    "changeText": "သီဟိုဠ္မွ ဉာဏ္ႀကီးရွင္သည္"
+}
+</pre>
+                                </p>
+                            </div>
+                    </div>
+            </div>
+            <!-- Success Output End -->
+
+            <!-- Error Out  -->
+            <div class="col-md-3 col-lg-3 mb-3">
+                    <div class="card">
+                            <div class="card-body">
+                                    <button type="button" class="btn btn-danger" disabled>
+                                            400 - Bad Request
+                                    </button>
+                                <p>
+<pre>
+{
+    "error": "\"text\" is required"
+}
+</pre>
+                                </p>
+                            </div>
+                    </div>
+            </div>
+            <!-- Error Out  End-->
+
+        </div>
+
+    </div>
+    <!-- Complex & Convert ZawGyi End -->
+
+
+    <!-- Detect Unicode Start -->
+    <div class="container mt-3">
+        <h2> UniCode </h2>
+
+        <h5 class="mb-4"> Detecting Uni </h5>
+
+        <div class="row">
+
+
+            <div class="col-md-4 col-lg-3 mb-3">
+                <div class="card">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                    <span class="badge badge-success"> Get </span>
+                                    <a 
+                                     class="btn btn-light btn-sm"
+                                     href="/api/uni/detect?text=သီဟိုဠ္မွ ဉာဏ္ႀကီးရွင္သည္ အာယုဝဍ္ဎနေဆးၫႊန္းစာကို ဇလြန္ေဈးေဘး ဗာဒံပင္ထက္ အဓိ႒ာန္လ်က္ ဂဃနဏဖတ" target="_blank" role="button" 
+                                    > 
+                                        /api/uni/detect 
+                                    </a>
+                            </div>
+                            <div class="responsive-table">
+                                <h6> Input Fields </h6>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Key</th>
+                                            <th scope="col">Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td> text </td>
+                                                <td>
+                                                     <span class="badge badge-light">String</span>
+                                                </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                           
+                        
+                        </div>
+                </div>
+            </div>
+            
+            <!-- Success Output -->
+            <div class="col-md-5 col-lg-6 mb-3">
+                    <div class="card">
+                            <div class="card-body">
+                                    <button type="button" class="btn btn-light" disabled>
+                                            Success 200 - OK
+                                    </button>
+                                <p>
+<pre>
+{
+    "detect": true,
+    "isUni": false,
+    "zawgyiScore": 1,
+    "description": "Your Result is Out "
+}
+</pre>
+                                </p>
+                            </div>
+                    </div>
+            </div>
+            <!-- Success Output End -->
+
+            <!-- Error Out  -->
+            <div class="col-md-3 col-lg-3 mb-3">
+                    <div class="card">
+                            <div class="card-body">
+                                    <button type="button" class="btn btn-danger" disabled>
+                                            400 - Bad Request
+                                    </button>
+                                <p>
+<pre>
+{
+    "error": "\"text\" is required"
+}
+</pre>
+                                </p>
+                            </div>
+                    </div>
+            </div>
+            <!-- Error Out  End-->
+
+        </div>
+
+    </div>
+    <!-- Detect Unicode End -->
+
+    <!-- Convert Unicode Start -->
+    <div class="container mt-3">
+
+        <h5 class="mb-4"> Converting Unicode </h5>
+
+        <div class="row">
+
+
+            <div class="col-md-4 col-lg-3 mb-3">
+                <div class="card">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                    <span class="badge badge-success"> Get </span>
+                                    <a 
+                                     class="btn btn-light btn-sm"
+                                     href="/api/uni/convert?text=သီဟိုဠ္မွ ဉာဏ္ႀကီးရွင္သည္ အာယုဝၯနေဆးၫႊန္းစာကို ဇလြန္ေဈးေဘး ဗာဒံပင္ထက္ အဓိ႒ာန္လ်က္ ဂဃနဏဖတ္ခဲ့သည္။"
+                                     target="_blank" role="button" 
+                                    > 
+                                        /api/uni/convert 
+                                    </a>
+                            </div>
+                            <div class="responsive-table">
+                                <h6> Input Fields </h6>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Key</th>
+                                            <th scope="col">Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td> text </td>
+                                                <td>
+                                                     <span class="badge badge-light">String</span>
+                                                </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                           
+                        
+                        </div>
+                </div>
+            </div>
+            
+            <!-- Success Output -->
+            <div class="col-md-5 col-lg-6 mb-3">
+                    <div class="card">
+                            <div class="card-body">
+                                    <button type="button" class="btn btn-light" disabled>
+                                            Success 200 - OK
+                                    </button>
+                                <p>
+<pre>
+{
+    "changeText": "သီဟိုဠ်မှ ဉာဏ်ကြီးရှင်သည် အာယုဝဍ္ဎနဆေးညွှန်းစာကို ဇလွန်ဈေးဘေး ဗာဒံပင်ထက် အဓိဋ္ဌာန်လျက် ဂဃနဏဖတ်ခဲ့သည်။"
+}
+</pre>
+                                </p>
+                            </div>
+                    </div>
+            </div>
+            <!-- Success Output End -->
+
+            <!-- Error Out  -->
+            <div class="col-md-3 col-lg-3 mb-3">
+                    <div class="card">
+                            <div class="card-body">
+                                    <button type="button" class="btn btn-danger" disabled>
+                                            400 - Bad Request
+                                    </button>
+                                <p>
+<pre>
+{
+    "error": "\"text\" is required"
+}
+</pre>
+                                </p>
+                            </div>
+                    </div>
+            </div>
+            <!-- Error Out  End-->
+
+        </div>
+
+    </div>
+    <!-- Convert Unicode End -->
+
+    <!-- Detect & Convert Unicode Start -->
+    <div class="container mt-3">
+
+        <h5 class="mb-4"> Detect-Convert Unicode </h5>
+
+        <div class="row">
+
+            <div class="col-md-4 col-lg-3 mb-3">
+                <div class="card">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                    <span class="badge badge-success"> Get </span>
+                                    <a 
+                                     class="btn btn-light btn-sm"
+                                     href="/api/uni/detect-convert?text=သီဟိုဠ္မွ ဉာဏ္ႀကီးရွင္သည္ အာယုဝၯနေဆးၫႊန္းစာကို ဇလြန္ေဈးေဘး ဗာဒံပင္ထက္ အဓိ႒ာန္လ်က္ ဂဃနဏဖတ္ခဲ့သည္။"
+                                     target="_blank" role="button" 
+                                    > 
+                                        /api/uni/detect-convert 
+                                    </a>
+                            </div>
+                            <div class="responsive-table">
+                                <h6> Input Fields </h6>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Key</th>
+                                            <th scope="col">Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td> text </td>
+                                                <td>
+                                                     <span class="badge badge-light">String</span>
+                                                </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                           
+                        
+                        </div>
+                </div>
+            </div>
+            
+            <!-- Success Output -->
+            <div class="col-md-5 col-lg-6 mb-3">
+                    <div class="card">
+                            <div class="card-body">
+                                    <button type="button" class="btn btn-light" disabled>
+                                            Success 200 - OK
+                                    </button>
+                                <p>
+<pre>
+{
+    "detect": true,
+    "isUni": false,
+    "changeText": "သီဟိုဠ်မှ ဉာဏ်ကြီးရှင်သည် အာယုဝဍ္ဎနဆေးညွှန်းစာကို ဇလွန်ဈေးဘေး ဗာဒံပင်ထက် အဓိဋ္ဌာန်လျက် ဂဃနဏဖတ်ခဲ့သည်။",
+    "zawgyiScore": 1,
+    "description": "Your Result is Out "
+}
+</pre>
+                                </p>
+                            </div>
+                    </div>
+            </div>
+            <!-- Success Output End -->
+
+            <!-- Error Out  -->
+            <div class="col-md-3 col-lg-3 mb-3">
+                    <div class="card">
+                            <div class="card-body">
+                                    <button type="button" class="btn btn-danger" disabled>
+                                            400 - Bad Request
+                                    </button>
+                                <p>
+<pre>
+{
+    "error": "\"text\" is required"
+}
+</pre>
+                                </p>
+                            </div>
+                    </div>
+            </div>
+            <!-- Error Out  End-->
+
+        </div>
+
+    </div>
+    <!-- Detect & Convert Unicode End -->
+
+    <!-- Complex & Convert Uni Start -->
+    <div class="container mt-3">
+
+        <h5 class="mb-4"> Complex-Convert Unicode </h5>
+
+        <div class="row">
+
+            <div class="col-md-4 col-lg-3 mb-3">
+                <div class="card">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                    <span class="badge badge-success"> Get </span>
+                                    <a 
+                                     class="btn btn-light btn-sm"
+                                     href="/api/uni/complex-convert?text=သီဟိုဠ္မွ ဉာဏ္ႀကီးရွင္သည္ အာယုဝၯနေဆးၫႊန္းစာကို "
+                                     target="_blank" role="button" 
+                                    > 
+                                        /api/uni/complex-convert 
+                                    </a>
+                            </div>
+                            <div class="responsive-table">
+                                <h6> Input Fields </h6>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Key</th>
+                                            <th scope="col">Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td> text </td>
+                                                <td>
+                                                     <span class="badge badge-light">String</span>
+                                                </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                           
+                        
+                        </div>
+                </div>
+            </div>
+            
+            <!-- Success Output -->
+            <div class="col-md-5 col-lg-6 mb-3">
+                    <div class="card">
+                            <div class="card-body">
+                                    <button type="button" class="btn btn-light" disabled>
+                                            Success 200 - OK
+                                    </button>
+                                <p>
+<pre>
+{
+    "changeText": "သီဟိုဠ်မှ ဉာဏ်ကြီးရှင်သည် အာယုဝဍ္ဎနဆေးညွှန်းစာကို"
+}
+</pre>
+                                </p>
+                            </div>
+                    </div>
+            </div>
+            <!-- Success Output End -->
+
+            <!-- Error Out  -->
+            <div class="col-md-3 col-lg-3 mb-3">
+                    <div class="card">
+                            <div class="card-body">
+                                    <button type="button" class="btn btn-danger" disabled>
+                                            400 - Bad Request
+                                    </button>
+                                <p>
+<pre>
+{
+    "error": "\"text\" is required"
+}
+</pre>
+                                </p>
+                            </div>
+                    </div>
+            </div>
+            <!-- Error Out  End-->
+
+        </div>
+
+    </div>
+    <!-- Complex & Convert Uni End -->
+
+</body>
+</html>
